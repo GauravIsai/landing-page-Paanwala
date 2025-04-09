@@ -379,3 +379,134 @@ body {
 	border-radius: 50%;
 	z-index: 1;
 }
+
+
+/* Responsive styles for tablets and mobile phones */
+/*@media only screen and (max-width: 768px) {
+	body {
+		flex-direction:column-reverse;
+		text-align: center;
+		padding: 10px;
+	}
+
+	
+
+	#typer-size {
+		font-size: 24px;
+	}
+
+	.p-img img {
+		width: 130px;
+		height: 130px;
+	}
+
+	form {
+		width: 100%;
+	}
+
+	input[type=text] {
+		width: 90%;
+		font-size: 16px;
+	}
+
+	button {
+		width: 80%;
+		font-size: 16px;
+	}
+
+	hr.style17 {
+		width: 200px;
+	}
+
+	
+	header {
+		height: 70vh;*/ /* Reduce from 100vh to 70vh */
+		/*padding: 20px 0;
+	}
+
+		header .vert-text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			height: 100%;
+			padding: 0 10px;
+		}
+
+			header .vert-text h1 {
+				font-size: 2.2em;
+				line-height: 1.2em;
+			}
+
+	header .vert-text .scroll-down {
+		bottom: 10%;
+	}
+
+
+}*/
+
+
+
+
+
+
+/* Mobile View: Position top loaders and bottom loaders */
+@media (max-width: 768px) {
+	.loader-container {
+		top: 20px; /* Distance from the top of the screen */
+		width: 80%; /* Adjust width for top loaders */
+		justify-content: space-between; /* Make loaders spaced out evenly */
+	}
+
+	.loader-container2 {
+		bottom: 20px; /* Distance from the bottom of the screen */
+		width: 80%; /* Adjust width for bottom loaders */
+		justify-content: space-between; /* Make loaders spaced out evenly */
+	}
+
+	.loader {
+		width: 90px;
+		height: 90px;
+	}
+
+	.p-img img {
+		width: 150px;
+		height: 150px;
+	}
+
+	h3 {
+		font-size: 25px;
+	}
+
+	#typer-size {
+		font-size: 18px;
+	}
+}
+
+/* Smaller mobile view (480px and below) */
+@media (max-width: 480px) {
+	.loader-container,
+	.loader-container2 {
+		width: 100%;
+		justify-content: space-evenly; /* Evenly space the loaders */
+	}
+
+	.loader {
+		width: 60px;
+		height: 60px;
+	}
+
+	.p-img img {
+		width: 150px;
+		height: 150px;
+	}
+
+	h3 {
+		font-size: 20px;
+	}
+
+	#typer-size {
+		font-size: 16px;
+	}
+}
