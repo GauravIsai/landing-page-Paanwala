@@ -24,6 +24,12 @@ $(document).ready(function() {
   });
 });
 
+	
+
+
+
+ 
+
 
 
 
@@ -188,3 +194,4 @@ $(document).ready(function() {
 		resetCallback: function() {}
 	}
 }(window, document, window.jQuery);
+

@@ -16,6 +16,7 @@ h6.major {
 	padding-bottom: 1em;
 	border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 	margin-bottom: 20px;
+
 }
 
 a {
@@ -103,47 +104,7 @@ header {
 				box-sizing: border-box;
 			}
 
-#contacts {
-	margin: 0 auto;
-	padding: 100px 0;
-	background: #224;
-	width: 100%;
-	color: #fff;
-	transition: all 1.7s ease;
-}
 
-	#contacts:hover {
-		background: #28a745;
-		color: #fff;
-	}
-
-	#contacts .social {
-		padding-bottom: 20px;
-		border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-	}
-
-form {
-	margin-top: 70px;
-	width: 100%;
-}
-
-input[type=text] {
-	margin-top: 20px;
-	width: 390px;
-	height: 55px;
-	border-radius: 100px;
-	padding: 10px;
-	outline: none;
-	background: rgba(0,0,0,0.2);
-	border: 1px solid #fff;
-	transition: all 0.3s ease;
-}
-
-	input[type=text]:focus {
-		background: rgba(40, 167, 69, 0.3);
-		color: #fff;
-		border: 1px solid #28a745;
-	}
 
 ::placeholder {
 	color: #fff;
@@ -269,12 +230,13 @@ img {
 	}
 }
 
-body {
+
+
+#main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	/*background: #000;*/
 }
 
 .loader-container {
@@ -380,71 +342,75 @@ body {
 	z-index: 1;
 }
 
+/* Bounce Effect */
+.bounce-effect {
+	font-family: 'Comfortaa', cursive;
+	font-size: 3rem;
+	color: #FFF5E1; /* Cream */
+	text-align: center;
+	display: inline-block;
+	animation: bounce 1.5s ease-in-out infinite;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 0, 0, 0.4); /* Subtle glow with shadow */
+}
 
-/* Responsive styles for tablets and mobile phones */
-/*@media only screen and (max-width: 768px) {
-	body {
-		flex-direction:column-reverse;
-		text-align: center;
-		padding: 10px;
+@keyframes bounce {
+	0%, 100% {
+		transform: translateY(0);
 	}
 
-	
+	50% {
+		transform: translateY(-20px);
+	}
+}
 
-	#typer-size {
-		font-size: 24px;
+
+
+.contact_us {
+	background: url("../Img/maps.jpg") no-repeat center center fixed;
+	-webkit-background: cover;
+	-moz-background: cover;
+	-o-background: cover;
+	background: cover;
+	min-height: 300px;
+	color: #FFF;
+	font-family: sans-serif;
+}
+
+	.contact_us .content {
+		background-color: rgba(2,2,2,.9);
+		padding: 30px;
 	}
 
-	.p-img img {
-		width: 130px;
-		height: 130px;
-	}
-
-	form {
-		width: 100%;
-	}
-
-	input[type=text] {
-		width: 90%;
-		font-size: 16px;
-	}
-
-	button {
-		width: 80%;
-		font-size: 16px;
-	}
-
-	hr.style17 {
-		width: 200px;
-	}
-
-	
-	header {
-		height: 70vh;*/ /* Reduce from 100vh to 70vh */
-		/*padding: 20px 0;
-	}
-
-		header .vert-text {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			text-align: center;
-			height: 100%;
-			padding: 0 10px;
+		.contact_us .content h4 {
+			margin-bottom: 30px;
 		}
 
-			header .vert-text h1 {
-				font-size: 2.2em;
-				line-height: 1.2em;
+		.contact_us .content .form-control {
+			background-color: rgba(82,78,78,.07);
+			color: #FFF;
+			border: none;
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+
+			.contact_us .content .form-control.active {
+				-webkit-transform: scale(1.1, 1.1);
+				-moztransform: scale(1.1, 1.1);
+				-o-transform: scale(1.1, 1.1);
+				transform: scale(1.1, 1.1);
 			}
 
-	header .vert-text .scroll-down {
-		bottom: 10%;
-	}
+		.contact_us .content textarea {
+			height: 108px;
+			outline: none;
+		}
 
-
-}*/
+		.contact_us .content .btn-danger {
+			padding-bottom: 10px;
+			padding-top: 10px;
+		}
 
 
 
@@ -482,6 +448,13 @@ body {
 	#typer-size {
 		font-size: 18px;
 	}
+	#main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+	}
+
 }
 
 /* Smaller mobile view (480px and below) */
@@ -509,4 +482,47 @@ body {
 	#typer-size {
 		font-size: 16px;
 	}
+
+	.contact_us {
+		padding: 30px 15px;
+	}
+
+		.contact_us .fa-headphones {
+			font-size: 3rem; /* Slightly smaller icon */
+			margin-bottom: 15px;
+		}
+
+		.contact_us h1 {
+			font-size: 22px;
+			margin-bottom: 10px;
+		}
+
+		.contact_us h4 {
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+
+		.contact_us form {
+			text-align: left;
+		}
+
+		.contact_us .form-row {
+			flex-direction: column; /* Stack name and email inputs */
+		}
+
+			.contact_us .form-row .col {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+
+		.contact_us textarea.form-control {
+			height: 150px;
+		}
+
+		.contact_us .btn {
+			font-size: 16px;
+			padding: 10px 20px;
+			width: 100%;
+		}
+
 }
